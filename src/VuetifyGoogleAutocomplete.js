@@ -297,7 +297,7 @@ export default {
     initGoogleMaps(googleObj) {
       if (!this.loadGoogleApi) {
         googleObj(window.google.maps ? window.google.maps : window.google);
-      } else if (this.google) {
+      } else if (Vue.google) {
         googleObj(Vue.google);
       } else {
         loadGoogleMapsAPI({
